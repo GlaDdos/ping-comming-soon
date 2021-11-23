@@ -1,0 +1,236 @@
+:root {
+    font-family: 'Libre Franklin', sans-serif;
+    box-sizing: border-box;
+
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+body {
+    min-height: 100vh;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+}
+
+main {
+    max-width: 375px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    background-color: white;
+}
+
+article .main,
+article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+article {
+    height: 100vh;
+    justify-content: space-around;
+}
+
+
+article img.logo {
+    margin-bottom: 2.5rem;
+    width: 70px;
+}
+
+article h1 {
+    font-weight: 200;
+    margin: .5rem 0;
+    color: var(--gray);
+}
+
+article b {
+    color: var(--very-dark-blue);
+}
+
+article p {
+    font-size: 0.95rem;
+    color: var(--very-dark-blue);
+    margin: .5rem 0;
+}
+
+article form {
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+}
+
+article form .input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+article form input[type="email"] {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--pale-blue);
+}
+
+article form input[type="email"].invalid {
+    border-color: var(--light-red);
+}
+
+article form input[type="email"].invalid:focus-visible {
+    outline: var(--light-red) auto 1px;
+}
+
+article form input::placeholder {
+    color: var(--pale-blue);
+}
+
+article form button[type="submit"] {
+    color: white;
+    font-weight: 600;
+    background-color: var(--blue);
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    margin-top: 1rem;
+
+    -webkit-box-shadow: -1px 13px 24px -14px rgba(66, 68, 90, 1);
+    -moz-box-shadow: -1px 13px 24px -14px rgba(66, 68, 90, 1);
+    box-shadow: -1px 13px 24px -14px rgba(66, 68, 90, 1);
+}
+
+article form button[type="submit"]:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+article form button[type="submit"]:active {
+    transform: scale(1.025);
+}
+
+article form span.error {
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--light-red);
+    text-align: center;
+    padding-top: .4rem;
+    padding-bottom: .8rem;
+}
+
+article footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article footer .social-icons {
+    display: flex;
+}
+
+article footer .icon-container {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--pale-blue);
+    border-radius: 50%;
+
+    margin: 5px;
+}
+
+article footer .icon-container:hover {
+    background-color: var(--blue);
+    cursor: pointer;
+}
+
+article footer i {
+    color: var(--blue);
+}
+
+article footer .icon-container:hover i {
+    color: white;
+}
+
+article footer .copyright {
+    color: var(--gray);
+    font-size: 0.85rem;
+    margin-top: 2rem;
+}
+
+img.img-responsive {
+    width: 100%;
+}
+
+span.error {
+    display: none;
+}
+
+span.show {
+    display: block;
+}
+
+@media only screen and (min-width: 600px) {
+    main {
+        max-width: 600px;
+    }
+
+    article img.logo {
+        margin-bottom: 2.5rem;
+        width: 90px;
+    }
+
+    article form {
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 3.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    article form button[type="submit"] {
+        margin: 0;
+        margin-left: 2rem;
+        flex-grow: 1;
+    }
+
+    article form .input-group {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 5;
+    }
+
+    article form span.error {
+        text-align: left;
+        padding-left: 2rem;
+    }
+
+    article footer .copyright {
+        margin-top: 1rem;
+    }
+
+
+    article h1 {
+        font-size: 2.5rem;
+    }
+
+    article p {
+        font-size: 1.3rem;
+    }
+
+}
